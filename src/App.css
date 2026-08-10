@@ -1,0 +1,251 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f6f2f0 0%, #eef2f1 100%);
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #1f2a37;
+  padding: 2.5rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(31, 42, 55, 0.08);
+}
+
+.brand {
+  font-size: 0.85rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.88;
+  margin-bottom: 1rem;
+  color: #33424d;
+}
+
+.header-image {
+  width: min(220px, 45%);
+  max-width: 240px;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 24px 50px rgba(18, 29, 39, 0.12));
+}
+
+.content {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  transform: translateY(-2.4rem);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-panel {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 40px 100px rgba(18, 29, 39, 0.08);
+  padding: 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8b5e3c;
+  font-weight: 700;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+  color: #1f2a37;
+}
+
+.description {
+  margin: 0;
+  max-width: 62ch;
+  color: #4c5a64;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.cta-button {
+  width: min(320px, 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  background: #bf8f6b;
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 18px 40px rgba(134, 82, 44, 0.18);
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(134, 82, 44, 0.24);
+}
+
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: #fdf7f2;
+  border: 1px solid rgba(155, 120, 90, 0.16);
+  border-radius: 24px;
+  padding: 1.75rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.13rem;
+  color: #243239;
+}
+
+.card-text {
+  margin: 0;
+  color: #55616d;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.details {
+  background: #fbf4ef;
+  border: 1px solid rgba(155, 120, 90, 0.14);
+  border-radius: 28px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #243239;
+}
+
+.details p {
+  margin: 0;
+  color: #4c5a64;
+  line-height: 1.8;
+}
+
+.feature-list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #33424d;
+}
+
+.feature-list li::before {
+  content: '✓';
+  color: #bf8f6b;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.footer {
+  margin: 2.5rem 0 1rem;
+  text-align: center;
+  color: #6b7885;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .content {
+    width: calc(100% - 1.5rem);
+    transform: none;
+    margin-top: -1.5rem;
+  }
+
+  .hero-panel {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .hero-panel h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.price {
+  max-width: 900px;
+  margin: 1.25rem auto;
+  background: #ffffff;
+  border: 1px solid #bf8f6b;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.boxa,
+.boxb {
+  flex: 1 1 0;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.boxa {
+  border-right: 1px solid #bf8f6b;
+}
+
+.price h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.price h4 {
+  margin: 0.5rem 0 0;
+  color: #4c5a64;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .price {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .boxa {
+    border-right: none;
+    border-bottom: 1px solid rgba(155, 120, 90, 0.12);
+    padding-bottom: 0.75rem;
+  }
+}
